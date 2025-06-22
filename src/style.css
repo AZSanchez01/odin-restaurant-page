@@ -1,0 +1,252 @@
+@font-face {
+    font-family: 'Burgundia PERSONAL USE';
+    src: url('./fonts/BurgundiaPERSONALUSE-Regular.woff2') format('woff2'),
+        url('./fonts/BurgundiaPERSONALUSE-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Metropolis';
+    src: url('./fonts/Metropolis-Bold.woff2') format('woff2'),
+        url('./fonts/Metropolis-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Metropolis';
+    src: url('./fonts/Metropolis-Medium.woff2') format('woff2'),
+        url('./fonts/Metropolis-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*CSS RESET*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+#root, #__next {
+  isolation: isolate;
+}
+
+/* --- MAIN STYLING ---*/
+/* --- MAIN STYLING ---*/
+/* --- MAIN STYLING ---*/
+/* --- MAIN STYLING ---*/
+/* --- MAIN STYLING ---*/
+/* --- MAIN STYLING ---*/
+:root {
+    font-family: 'Burgundia PERSONAL USE';
+
+    --color-1-dark: #01638d;
+    --color-2-dark: #610d4b;
+    --color-3-bold: #fe004c;
+    --color-4-light: #abcecc;
+    --color-5-light: #fff2cd;
+    --spacing-md: 1rem;
+
+    font-family: 'Metropolis';
+}
+button:hover {
+    opacity: 0.8;
+}
+.header-text {
+    font-family: 'Burgundia PERSONAL USE';
+}
+.text {
+    line-height: 1.75;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-2-dark);
+    min-height: 100vh;
+}
+#content {
+    display: flex;
+    flex: 1;
+}
+/*MAIN HEADER & NAV*/
+header,
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 1rem 1.5rem;
+}
+header {
+    background: #610d4b;
+    border-bottom: 2px solid gray;
+}
+
+header .logo {
+    font-size: 2.3rem;
+}
+header nav {
+    font-weight: bold;
+    gap: 1.5rem;
+}
+header button {
+    background: none;
+    outline: none;
+    border: none;
+    color: white;
+}
+
+/*HOMEPAGE HERO*/
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-2-dark);
+    padding: 0 12rem 0 20rem;
+    color: white;
+    gap: 1.3rem;
+}
+.hero-section .section-text {
+    display: flex;
+    flex-direction: column;
+    max-width: 60ch;
+}
+.hero-section .header-text {
+    font-size: 4.3rem;
+}
+.hero-section img {
+    max-height: 600px;
+}
+
+.hero-section button {
+    background: var(--color-3-bold);
+    border: 1px solid darkslategray;
+    border-radius: 1rem;
+    margin: 1rem auto;
+    padding: 0.5rem 1rem;
+    align-self: center;
+    font-weight: bold;
+    color: white;
+}
+
+/*CONTACT PAGE*/
+#contact {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: baseline;
+  background: var(--color-5-light);
+}
+
+#contact img {
+  align-self: flex-end;
+  padding: 4rem;
+  min-width: 100%;
+  border-top: 4px solid black;
+  border-right: 4px solid black;
+}
+
+#contact .contact-form {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 0 0 4rem;
+  min-height: 100%;
+}
+
+.contact-form .header-text{ 
+  font-size: 4.5rem;
+}
+
+.contact-form .contact-details {
+  flex: 1;
+  margin-top: 2rem;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  padding-top: 3rem;
+  padding-left: 4rem;
+}
+
+.contact-details .contact-label {
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+.contact-details .contact-info {
+  font-size: 1.2rem;
+  max-width: 40ch;
+  margin-bottom: 2rem;
+}
+
+#food-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: whitesmoke;
+  padding: 2rem;
+  min-width: 100%;
+  gap: 3rem;
+}
+
+#food-menu .menu-title .header-text {
+  font-size: 4.3rem;
+  color: black;
+}
+#food-menu .menu-title .subtitle {
+  font-weight: bold;
+  text-align: center;
+  color: darkslategray;
+}
+#food-menu .cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 420px));
+  justify-content: center;
+  min-width: 100%;
+  gap: 1rem;
+}
+
+#food-menu .card {
+  background: white;
+  border: 1px solid black;
+  border-radius: 1.5rem;
+  box-shadow: 0 1px 2px darkslategray;
+  padding: 2.5rem;
+}
+
+#food-menu .card .header-text {
+  font-family: "Metropolis";
+  font-weight: bold;
+  font-size: 2rem;
+}
+#food-menu img {
+  border-radius: 50%;
+  border: 2px solid gray;
+  margin-bottom: 2rem;
+}
